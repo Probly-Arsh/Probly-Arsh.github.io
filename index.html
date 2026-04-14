@@ -133,7 +133,8 @@
     transition: color 0.2s;
     font-weight: 400;
   }
-  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover { color: var(--accent2); }
+  .nav-links a:hover .nav-arrow { transform: translate(2px, -2px); }
 
   /* ── MAIN LAYOUT ── */
   main { position: relative; z-index: 1; }
@@ -231,10 +232,11 @@
     border: 1px solid var(--border2);
   }
   .btn-secondary:hover {
-    border-color: rgba(255,255,255,0.3);
-    color: var(--text);
+    border-color: var(--accent2);
+    color: var(--accent2);
     transform: translateY(-2px);
   }
+  .btn-secondary:hover .btn-arrow { transform: translate(3px, -3px); }
   .hero-scroll {
     position: absolute;
     bottom: 3rem;
@@ -722,7 +724,9 @@
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, color 0.22s ease;
   }
   .btn-secondary:hover {
-    box-shadow: 0 4px 20px rgba(167,139,248,0.12);
+    border-color: var(--accent2);
+    color: var(--accent2);
+    box-shadow: 0 4px 20px rgba(74,127,193,0.2);
   }
 
   /* Project cards — smoother lift */
@@ -759,8 +763,10 @@
     transition: all 0.25s cubic-bezier(0.22,1,0.36,1);
   }
   .contact-chip:hover {
+    border-color: var(--accent2);
+    color: var(--accent2);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(167,139,250,0.12);
+    box-shadow: 0 6px 20px rgba(74,127,193,0.15);
   }
   /* Icon inside chip spins gently on hover */
   .contact-chip:hover svg {
@@ -800,8 +806,8 @@
 
   /* Skill cards — border glow on hover */
   .skill-card:hover {
-    border-color: rgba(167,139,250,0.35) !important;
-    background: rgba(167,139,250,0.04);
+    border-color: rgba(74,127,193,0.4) !important;
+    background: rgba(74,127,193,0.05);
   }
   .skill-card:hover .skill-name {
     color: var(--text);
@@ -849,7 +855,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://probly-arsh.github.io/resume.pdf" target="_blank" style="color:var(--accent2);border:1px solid rgba(167,139,250,0.3);padding:6px 14px;border-radius:100px;transition:all 0.2s;">Resume ↗</a></li>
+    <li><a href="https://probly-arsh.github.io/resume.pdf" target="_blank">Resume <svg width="11" height="11" viewBox="0 0 14 14" fill="none" style="display:inline-block;vertical-align:middle;transition:transform 0.25s cubic-bezier(.22,1,.36,1);" class="nav-arrow"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
   </ul>
 </nav>
 
@@ -868,8 +874,8 @@
     </div>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="https://www.linkedin.com/in/adarshsujai/" target="_blank" class="btn btn-secondary">LinkedIn ↗</a>
-      <a href="https://probly-arsh.github.io/resume.pdf" target="_blank" class="btn btn-secondary">Resume ↗</a>
+      <a href="https://www.linkedin.com/in/adarshsujai/" target="_blank" class="btn btn-secondary">LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="transition:transform 0.25s cubic-bezier(.22,1,.36,1);" class="btn-arrow"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://probly-arsh.github.io/resume.pdf" target="_blank" class="btn btn-secondary">Resume <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="transition:transform 0.25s cubic-bezier(.22,1,.36,1);" class="btn-arrow"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <div class="hero-scroll">
       <div class="scroll-line"></div>
