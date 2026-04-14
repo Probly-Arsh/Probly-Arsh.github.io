@@ -1,8 +1,3 @@
-// ─────────────────────────────────────────
-//  projects.js  —  Add or edit projects here
-//  Each object = one project card
-// ─────────────────────────────────────────
-
 const PROJECTS = [
   {
     number:  "001",
