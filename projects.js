@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────
+//  projects.js  —  Add or edit projects here
+//  Each object = one project card
+// ─────────────────────────────────────────
+
 const PROJECTS = [
   {
     number:  "001",
@@ -5,7 +10,7 @@ const PROJECTS = [
     title:   "Automatic License Plate Recognition",
     desc:    "End-to-end ALPR pipeline that detects and reads vehicle license plates in real time. Combines YOLOv8 for accurate plate detection with EasyOCR for character extraction — ready to plug into any surveillance or traffic management system.",
     tags:    ["YOLOv8", "EasyOCR", "Python", "OpenCV", "Object Detection"],
-    link:    "https://github.com/Probly-Arsh/license-plate-recognition-yolov8",
+    link:    "https://github.com/Adarsh-Sujai/license-plate-recognition-yolov8",
     badge:   "ML + CV",
     status:  "live"   // "live" | "coming-soon"
   },
@@ -15,7 +20,7 @@ const PROJECTS = [
     title:   "REST API for Task Management",
     desc:    "Backend REST API handling full CRUD operations for task management, with data persisted in an SQL database. Supports creating, updating, retrieving and deleting tasks through clean REST endpoints.",
     tags:    ["Python", "Flask", "SQL", "REST API"],
-    link:    "https://github.com/Probly-Arsh/task-manager-api",
+    link:    "https://github.com/Adarsh-Sujai/task-manager-api",
     badge:   "Backend",
     status:  "live"
   },
@@ -76,4 +81,17 @@ function renderProjects() {
 ');
 }
 
-document.addEventListener('DOMContentLoaded', renderProjects);
+renderProjects();
+
+
+renderProjects = (function(orig) {
+  return function() {
+    orig();
+    var obs = window._revealObserver;
+    if (obs) {
+      var el = document.querySelectorAll('#projects-list .reveal');
+      el.forEach(function(e){ obs.observe(e); });
+    }
+  };
+})(renderProjects);
+

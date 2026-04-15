@@ -593,6 +593,14 @@
     transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.25s, background 0.25s;
   }
   .tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--border2);
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    background: var(--surface2);
+    font-weight: 400;
     transition: border-color 0.2s, color 0.2s, background 0.2s;
   }
   .tag:hover {
