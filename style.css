@@ -290,6 +290,11 @@
     margin-bottom: 3.5rem;
   }
 
+  #projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
   .project-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -297,7 +302,8 @@
     padding: 2.5rem;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.22,1,0.36,1);
+    will-change: transform;
   }
   .project-card::before {
     content: '';
@@ -767,9 +773,9 @@
     transition: border-color 0.3s ease, transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
   }
   .project-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(124,111,224,0.35);
-    box-shadow: 0 16px 48px rgba(124,111,224,0.1);
+    transform: translateY(-5px);
+    border-color: rgba(74,127,193,0.4);
+    box-shadow: 0 16px 40px rgba(46,95,163,0.12);
   }
 
   @keyframes badgeShimmer {
