@@ -32,7 +32,7 @@ const PROJECTS = [
     tags:     ["Python", "Pandas", "Matplotlib", "NumPy", "EDA"],
     link:     "",
     badge:    "Data Science",
-    status:   "coming-soon"
+    status:   "Under Development"
   }
 ];
 
